@@ -12,7 +12,6 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.tomek.schedule.MainActivity"
     tools:showIn="@layout/activity_main">
-
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -21,4 +20,5 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
     </TableLayout>
+
 </RelativeLayout>
