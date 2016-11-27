@@ -4,7 +4,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 
 /**
  * Created by Tomek on 2016-11-24.
@@ -55,8 +54,29 @@ public class JsonStruct {
         return title;
     }
 
+    public Calendar getStart(){
+        return start;
+    }
+
+    public Calendar getEnd(){
+        return end;
+    }
+
     public String getGroup(){
         return group;
+    }
+
+    public int getLessonLength(){
+        /**
+         * podaje ile dla danych zajęć jest wierszy do połączenia
+         * jednostka czasu = 15 minut
+         */
+        long diff = end.getTimeInMillis() - start.getTimeInMillis();
+        System.out.println("diff:" + diff);
+
+        int amount = (int) (diff / (15 * 60 * 1000)); // 15 minut
+        System.out.println("amount:" + amount);
+        return amount;
     }
 
 
